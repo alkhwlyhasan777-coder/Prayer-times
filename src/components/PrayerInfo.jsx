@@ -13,7 +13,7 @@ function PrayerInfo() {
             dir="rtl"
             className="
                 w-full
-                bg-slate-950
+                bg-slate-750
                 px-4
                 py-10
             "

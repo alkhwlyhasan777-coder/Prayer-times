@@ -1303,7 +1303,7 @@ function InfoCard({
     icon,
 }) {
     return (
-        <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-center hover:border-emerald-500/30 transition">
+        <div className="p-5 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg shadow-black/10 text-center hover:bg-white/10 hover:border-emerald-400/30 hover:shadow-emerald-500/10 transition-all duration-300">
 
             <div className="text-2xl mb-2">
                 {icon}
