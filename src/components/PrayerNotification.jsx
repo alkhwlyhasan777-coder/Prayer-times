@@ -242,8 +242,8 @@ function PrayerNotification() {
             className="
                 fixed
                 right-3
-                top-0
-                z-40
+                top-20
+                z-411110
                 md:hidden
             "
         >
