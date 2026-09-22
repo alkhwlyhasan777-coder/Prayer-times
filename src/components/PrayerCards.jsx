@@ -318,6 +318,7 @@ function PrayerCards() {
 
     return (
         <section
+        id="prayers"
             dir="rtl"
             className="
                 relative

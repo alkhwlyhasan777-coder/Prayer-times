@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&display=swap');
+
+.font-quran {
+    font-family: "Amiri", serif;
+}
+
+.font-arabic {
+    font-family: "Cairo", sans-serif;
+}
+
+@keyframes quranVerseEnter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.quran-verse-enter {
+    animation: quranVerseEnter 1500ms ease-out;
+}

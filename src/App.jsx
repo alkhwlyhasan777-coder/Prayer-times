@@ -13,7 +13,9 @@ import bg2 from "./assets/prayer-bg-2.jpg";
 import bg3 from "./assets/prayer-bg-3.avif";
 import bg4 from "./assets/العشاء.png";
 import bg5 from "./assets/prayer-bg.png";
-
+import QuranSection from "./components/QuranSection";
+import QuranAudio from "./components/QuranAudio";
+import Header from "./components/Header";
 const backgrounds = [bg3, bg2, bg1 , bg4 , bg5];
 
 function App() {
@@ -74,16 +76,16 @@ function App() {
                             "
                         />
                     </div>
-
+                        <Header/>
                     {/* App Content */}
                     <div className="relative z-10">
-
+                        <QuranSection/>
                         <main>
                             <Location />
                             <PrayerCards />
                             <PrayerInfo />
                         </main>
-
+                        <QuranAudio/>
                         <Footer />
 
                     </div>
