@@ -1,89 +1,103 @@
+import logo from "../assets/logo.png";
 
 function Header() {
-
     return (
         <header
             dir="rtl"
             className="
                 fixed
-                top-0
-                left-0
-                right-0
+                top-3
+                left-1/2
                 z-50
-                border-b
+                w-[calc(100%-1.5rem)]
+                max-w-2xl
+                -translate-x-1/2
+
+                rounded-full
+                border
                 border-white/10
-                bg-slate-950/60
+                bg-slate-950/40
                 backdrop-blur-xl
+
+                md:top-5
+                md:w-[calc(100%-2rem)]
             "
         >
             <div
                 className="
-                    mx-auto
                     flex
-                    h-16
+                    h-14
                     w-full
                     items-center
-                    justify-between
+                    justify-center
                     px-4
+
+                    sm:h-16
+                    sm:px-6
                     md:px-8
                 "
-        >{/* Navigation */}
-          <nav className="hidden items-center gap-6 md:flex">
-            <a
-              href="#location"
-              className="text-sm text-slate-300 transition hover:text-emerald-400"
             >
-              الموقع
-            </a>
+                <nav
+                    className="
+                        flex
+                        w-full
+                        items-center
+                        justify-center
+                        gap-5
 
-            <a
-              href="#prayers"
-              className="text-sm text-slate-300 transition hover:text-emerald-400"
-            >
-              مواقيت الصلاة
-            </a>
-
-            <a
-              href="#quran"
-              className="text-sm text-slate-300 transition hover:text-emerald-400"
-            >
-              آيات
-            </a>
-          </nav>
-                {/* Logo */}
-                <a
-                    href="#top"
-                    className="flex items-center gap-3"
+                        sm:gap-8
+                        md:gap-12
+                        lg:gap-16
+                    "
                 >
-                    <div
+                    <a
+                        href="#location"
                         className="
-                            flex
-                            h-10
-                            w-10
-                            items-center
-                            justify-center
-                            rounded-xl
-                            border
-                            border-emerald-400/20
-                            bg-emerald-400/10
-                            text-lg
+                            whitespace-nowrap
+                            text-xs
+                            text-slate-300
+                            transition
+                            duration-300
+                            hover:text-emerald-400
+
+                            sm:text-sm
                         "
                     >
-                        🕌
-                    </div>
+                        الموقع
+                    </a>
 
-                    <div className="leading-tight">
-                        <h1 className="text-base font-bold text-white md:text-lg">
-                            Prayer Times
-                        </h1>
+                    <a
+                        href="#prayers"
+                        className="
+                            whitespace-nowrap
+                            text-xs
+                            text-slate-300
+                            transition
+                            duration-300
+                            hover:text-emerald-400
 
-                        <p className="text-[11px] text-slate-400">
-                            مواقيت الصلاة
-                        </p>
-                    </div>
-                </a>
+                            sm:text-sm
+                        "
+                    >
+                        مواقيت الصلاة
+                    </a>
 
-                
+                    <a
+                        href="#quran"
+                        className="
+                            whitespace-nowrap
+                            text-xs
+                            text-slate-300
+                            transition
+                            duration-300
+                            hover:text-emerald-400
+
+                            sm:text-sm
+                        "
+                    >
+                        آيات
+                    </a>
+                </nav>
             </div>
         </header>
     );

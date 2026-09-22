@@ -7,7 +7,7 @@ import Location from "./components/Location";
 import PrayerCards from "./components/PrayerCards";
 import PrayerInfo from "./components/PrayerInfo";
 import Footer from "./components/Footer";
-
+import PrayerNotification from "./components/PrayerNotification";
 import bg1 from "./assets/prayer-bg-1.jpg";
 import bg2 from "./assets/prayer-bg-2.jpg";
 import bg3 from "./assets/prayer-bg-3.avif";
@@ -77,10 +77,11 @@ function App() {
                         />
                     </div>
                         <Header/>
+                        <PrayerNotification/>
                     {/* App Content */}
                     <div className="relative z-10">
                         <QuranSection/>
-                        <main>
+                        <main className="pt-32">
                             <Location />
                             <PrayerCards />
                             <PrayerInfo />
