@@ -101,7 +101,7 @@ function Footer() {
                         flex
                         flex-col
                         items-center
-                        justify-between
+                        justify-center
                         gap-4
                         border-t
                         border-white/10
