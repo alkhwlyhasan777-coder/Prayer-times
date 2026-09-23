@@ -318,7 +318,7 @@ function PrayerCards() {
 
     return (
         <section
-        id="prayers"
+            id="prayers"
             dir="rtl"
             className="
                 relative
@@ -495,16 +495,14 @@ function PrayerCards() {
                                     transition-all
                                     duration-300
 
-                                    ${
-                                        isNext
-                                            ? "border-emerald-400/50 bg-emerald-400/10 shadow-xl shadow-emerald-950/30"
-                                            : "border-white/10 bg-white/5 hover:-translate-y-2 hover:border-emerald-400/30 hover:bg-white/10"
+                                    ${isNext
+                                        ? "border-emerald-400/50 bg-emerald-400/10 shadow-xl shadow-emerald-950/30"
+                                        : "border-white/10 bg-white/5 hover:-translate-y-2 hover:border-emerald-400/30 hover:bg-white/10"
                                     }
 
-                                    ${
-                                        isPassed
-                                            ? "opacity-60"
-                                            : "opacity-100"
+                                    ${isPassed
+                                        ? "opacity-60"
+                                        : "opacity-100"
                                     }
                                 `}
                             >
@@ -560,10 +558,9 @@ function PrayerCards() {
                                         transition-all
                                         duration-500
 
-                                        ${
-                                            isNext
-                                                ? "bg-emerald-400/30"
-                                                : "bg-emerald-400/5 group-hover:bg-emerald-400/15"
+                                        ${isNext
+                                            ? "bg-emerald-400/30"
+                                            : "bg-emerald-400/5 group-hover:bg-emerald-400/15"
                                         }
                                     `}
                                 />
@@ -582,50 +579,87 @@ function PrayerCards() {
                                 >
                                     0{prayer.id}
                                 </div>
-
                                 {/* Image */}
 
                                 <div
                                     className={`
-                                        relative
-                                        mx-auto
-                                        mb-5
-                                        mt-4
-                                        flex
-                                        h-24
-                                        w-24
-                                        items-center
-                                        justify-center
-                                        rounded-2xl
-                                        bg-slate-900/80
-                                        p-3
-                                        ring-1
-                                        transition-all
-                                        duration-300
+        relative
+        mx-auto
+        mb-5
+        mt-4
 
-                                        ${
-                                            isNext
-                                                ? "ring-emerald-400/30 shadow-lg shadow-emerald-950/40"
-                                                : "ring-white/10 group-hover:ring-emerald-400/20"
+        h-40
+        w-full
+
+        overflow-hidden
+        rounded-2xl
+
+        transition-all
+        duration-500
+
+        ${isNext
+                                            ? `
+                    ring-1
+                    ring-emerald-400/40
+                    shadow-[0_0_30px_rgba(16,185,129,0.20)]
+                `
+                                            : `
+                    ring-1
+                    ring-white/10
+                    group-hover:ring-emerald-400/30
+                `
                                         }
-                                    `}
+    `}
                                 >
+                                    {/* صورة الصلاة */}
 
                                     <img
                                         src={prayer.image}
                                         alt={prayer.name}
                                         className="
-                                            h-full
-                                            w-full
-                                            object-contain
-                                            transition-transform
-                                            duration-300
-                                            group-hover:scale-110
-                                        "
+            absolute
+            inset-0
+
+            h-full
+            w-full
+
+            object-cover
+
+            transition-all
+            duration-500
+
+            group-hover:scale-105
+        "
                                     />
 
-                                </div>
+                                    {/* Overlay */}
 
+                                    <div
+                                        className="
+            pointer-events-none
+            absolute
+            inset-0
+
+            bg-gradient-to-t
+            from-slate-950/40
+            via-transparent
+            to-white/5
+        "
+                                    />
+
+                                    {/* Glow للصلاة القادمة */}
+
+                                    {isNext && (
+                                        <div
+                                            className="
+                pointer-events-none
+                absolute
+                inset-0
+                bg-emerald-400/5
+            "
+                                        />
+                                    )}
+                                </div>
                                 {/* Prayer Name */}
 
                                 <h3
@@ -634,10 +668,9 @@ function PrayerCards() {
                                         text-xl
                                         font-bold
 
-                                        ${
-                                            isNext
-                                                ? "text-emerald-300"
-                                                : "text-white"
+                                        ${isNext
+                                            ? "text-emerald-300"
+                                            : "text-white"
                                         }
                                     `}
                                 >
@@ -669,10 +702,9 @@ function PrayerCards() {
                                             text-2xl
                                             font-bold
 
-                                            ${
-                                                isNext
-                                                    ? "text-emerald-400"
-                                                    : " text-white "
+                                            ${isNext
+                                                ? "text-emerald-400"
+                                                : " text-white "
                                             }
                                         `}
                                     >
@@ -724,8 +756,8 @@ function PrayerCards() {
                                         {prayer.icon}
                                     </span>
 
-                                          
-                                         
+
+
                                     <span className="text-white">
                                         {prayer.description}
                                     </span>
