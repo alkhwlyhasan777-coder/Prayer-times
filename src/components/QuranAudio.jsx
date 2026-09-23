@@ -92,7 +92,7 @@ function QuranAudio() {
                         hover:text-slate-950
                     "
                 >
-                    🔊 تشغيل تلاوة الآية
+                    تشغيل تلاوة الآية
                 </button>
             )}
 
@@ -118,7 +118,7 @@ function QuranAudio() {
                         backdrop-blur-md
                     "
                 >
-                    🔇 إيقاف التلاوة
+                     إيقاف التلاوة
                 </button>
             )}
         </>
