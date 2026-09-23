@@ -116,11 +116,6 @@ function Footer() {
                     <p>
                         © {currentYear} Prayer Times. جميع الحقوق محفوظة.
                     </p>
-
-                    <p className="text-slate-600">
-                        تم التطوير باستخدام React & Tailwind CSS
-                    </p>
-
                 </div>
 
             </div>
